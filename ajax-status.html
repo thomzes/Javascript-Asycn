@@ -16,6 +16,10 @@
       }
 
       const ajax = new XMLHttpRequest();
+      ajax.onreadystatechange = () => {
+        console.info(`Ready State Change ${ajax.readyState}`);
+      };
+
       ajax.open("GET", "api/salah.json");
       //   ajax.open("GET", "api/hello.json");
       ajax.addEventListener("load", () => {
